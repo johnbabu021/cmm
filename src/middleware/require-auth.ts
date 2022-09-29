@@ -3,7 +3,7 @@ import { NotAuthorizedError } from "../erros/not-authorizederror";
 
 const requireAuth = (req: Request, res: Response, next: NextFunction) => {
   if (!req?.currentuser) {
-    // throw new NotAuthorizedError();
+    throw new NotAuthorizedError();
   }
   next();
 };
