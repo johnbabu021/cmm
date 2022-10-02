@@ -9,6 +9,7 @@ export class TicketCreatedListner extends Listner<TicketCreatedEvent> {
   onMessage(data: TicketCreatedEvent["data"], msg: Message) {
     console.log("Event Data", data);
     console.log(data.title);
+    console.log(data.userId)
     msg.ack();
   }
 }
